@@ -7,6 +7,8 @@ import TrendingProducts from "./components/TrendingProduct";
 import Th from "./components/TrendingTh";
 import DiscountItems from "./components/Discount";
 import UniqueFeature from "./components/UniqueFeatures";
+import Offers from "./components/Offers";
+import TopCategory from "./components/TopCategory";
 
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
       <UniqueFeature/>
       <LatestProducts />
       <DiscountItems />
+      <TopCategory/>
+      <Offers />
       <TrendingProducts />
       <Th />
       <LatestBlog /> 
