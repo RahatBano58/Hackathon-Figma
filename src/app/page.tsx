@@ -9,6 +9,8 @@ import DiscountItems from "./components/Discount";
 import UniqueFeature from "./components/UniqueFeatures";
 import Offers from "./components/Offers";
 import TopCategory from "./components/TopCategory";
+import ShopexOffer from "./components/ShopexOffer";
+
 
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
       <FeaturedProducts />
       <UniqueFeature/>
       <LatestProducts />
+      <ShopexOffer/>
       <DiscountItems />
       <TopCategory/>
       <Offers />
