@@ -46,7 +46,7 @@ function Navbar() {
                 <Link href="/">Shop</Link>
               </li>
               <li className="p-4 hover:underline hover:text-pink-600 underline-offset-2">
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
