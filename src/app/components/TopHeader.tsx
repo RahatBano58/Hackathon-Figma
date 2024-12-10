@@ -71,7 +71,7 @@ const TopHeader = () => {
           </div>
 
           {/* Login */}
-          <a href="/login" className="flex items-center gap-2 cursor-pointer hover:text-gray-200">
+          <a href="/myAccount" className="flex items-center gap-2 cursor-pointer hover:text-gray-200">
             <UserRound />
             <span>Login</span>
           </a>
