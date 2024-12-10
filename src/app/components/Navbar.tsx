@@ -43,7 +43,7 @@ function Navbar() {
                 <Link href="/">Blog</Link>
               </li>
               <li className="p-4 hover:underline hover:text-pink-600 underline-offset-2">
-                <Link href="/">Shop</Link>
+                <Link href="/shopGrid">Shop</Link>
               </li>
               <li className="p-4 hover:underline hover:text-pink-600 underline-offset-2">
                 <Link href="/contact">Contact</Link>
