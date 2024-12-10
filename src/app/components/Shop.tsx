@@ -1,4 +1,4 @@
-import ShopGrid from "../shopGrid/gridData"
+{/* import ShopGrid from "../shopGrid/gridData"
 
 const Shop = () => {
     return (
@@ -9,4 +9,4 @@ const Shop = () => {
     )
   }
   
-  export default Shop
+  export default Shop */}
