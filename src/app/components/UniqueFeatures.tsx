@@ -9,7 +9,7 @@ const UniqueFeature = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center relative mt-6 md:mt-0">
           <div className="rounded-full bg-pink-200 w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 absolute"></div>
           <Image
-            src="/uniquefeature/stylishSofa.png"
+            src="/uniquefeature/sofa2.png"
             width={250}
             height={200}
             alt="sofa"
