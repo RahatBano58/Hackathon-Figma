@@ -1,161 +1,195 @@
-import React from 'react';
-import { ChevronDown, List, LayoutGrid } from 'lucide-react';
-import Image from 'next/image'; // Import Image component from Next.js
+import Image from "next/image";
 
-const shopGriddata = [
-  {
-      pic: '/images/grid9.png',
-      title: 'Vel elit euismod',
-      offerPrice: '$26.00',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid10.png',
-      title: 'Ultricies condimentum imperdiet',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid11.png',
-      title: 'Vitae suspendisse sed',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid8.png',
-      title: 'Sed at fermentum',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid1.png',
-      title: 'Fusce pellentesque at',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid2.png',
-      title: 'Vestibulum magna laoreet',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid3.png',
-      title: 'Sollicitudin amet orci',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid4.png',
-      title: 'Ultrices mauris sit',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid5.png',
-      title: 'Pellentesque condimentum ac',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid6.png',
-      title: 'Cras scelerisque velit',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid7.png',
-      title: 'Lectus vulputate faucibus',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-  {
-      pic: '/images/grid8.png',
-      title: 'Purus risus, ut',
-      offerPrice: '$26.00 ',
-      regularPrice: '$42.00'
-  },
-]
+export default function Home() {
+  const products = [
+    {
+      id: 1,
+      name: "Dictum Morbi",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s1.png", // Leading slash added
+      rating: 4,
+    },
+    {
+      id: 2,
+      name: "Sodales Sit",
+      description: "Magna in est adipiscing in phasellus non in justo.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s2.png",
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "Nibh Varius",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s3.png",
+      rating: 3,
+    },
+    {
+      id: 4,
+      name: "Mauris Quis",
+      description: "Magna in est adipiscing in phasellus non in justo.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s4.png",
+      rating: 4,
+    },
+    {
+      id: 5,
+      name: "Mauris Quis",
+      description: "Magna in est adipiscing in phasellus non in justo.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s5.png",
+      rating: 5,
+    },
+    {
+      id: 6,
+      name: "Mauris Quis",
+      description: "Magna in est adipiscing in phasellus non in justo.",
+      price: 26.0,
+      oldPrice: 52.0,
+      image: "/images/s6.png",
+      rating: 2,
+    },
+  ];
 
-const ShopGrid = () => {
   return (
-    <>
-      <div className='bg-shade2'>
-        <div className="md:container md:px-[1.3rem] px-[.8rem] pt-[98px]">
-          <h2 className='text-navy'>Shop Grid Default</h2>
-          <div className='flex gap-2 '>
-            <h4>Home</h4>
-            <h4>. Pages</h4>
-            <h4 className='text-pink pb-[114px]'> . Shop Grid Default</h4>
-          </div>
-        </div>
-      </div>
-
-      <div className="md:container md:px-[1.3rem] px-[.8rem] md:pt-[98px] md:flex items-center justify-between">
-        <div className='mt-12 md:mt-0'>
-          <h2 className='text-navy text-[28px] lg:text-[30px] 2xl:text-[34px]'>
-            Ecommerce Accessories & Fashion item
-          </h2>
-          <h4 className='text-extralight font-lato'>About 9,620 results (0.62 seconds)</h4>
+    <div className="flex flex-col lg:flex-row">
+      {/* Sidebar */}
+      <aside className="w-full lg:w-1/4 p-4 border-r bg-gray-100">
+        {/* Product Brand */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold mb-2">Product Brand</h2>
+          {["Coaster Furniture", "Fusion Dot High Fashion", "Unique Furniture Restoration"].map(
+            (brand) => (
+              <label key={brand} className="block mb-2">
+                <input type="checkbox" className="mr-2" />
+                {brand}
+              </label>
+            )
+          )}
         </div>
 
-        <div className='hidden lg:block'>
-          <div className='flex gap-9 '>
-            <div className='flex gap-2'>
-              <h3 className='text-navy font-normal'>Per Page: </h3>
-              <h3 className='border rounded-sm border-primary py-4 px-8'></h3>
-            </div>
-            <div className='flex gap-2'>
-              <h3 className='text-navy font-normal'>Sort By: </h3>
-              <h4 className='text-extralight border rounded-sm border-primary py-1 px-3 font-lato flex items-center gap-1'>
-                Best Match <span><ChevronDown /></span>
-              </h4>
-            </div>
-            <div className='flex gap-8'>
-              <div className='flex items-center gap-2'>
-                <h3 className='text-navy font-normal'>View:</h3>
-                <List className='text-navy' />
-                <LayoutGrid className='text-navy' />
-              </div>
-              <div>
-                <h3 className='border rounded-sm border-primary py-4 px-20'></h3>
-              </div>
-            </div>
-          </div>
+        {/* Discount Offer */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold mb-2">Discount Offer</h2>
+          {["20% Cashback", "5% Cashback Offer", "25% Discount Offer"].map((offer) => (
+            <label key={offer} className="block mb-2">
+              <input type="checkbox" className="mr-2" />
+              {offer}
+            </label>
+          ))}
         </div>
-      </div>
 
-      <div className='md:container md:px-[1.3rem] md:grid grid-cols-4'>
-        {shopGriddata.map((item, index) => (
-          <div key={index} className='flex justify-center my-12'>
-            <div className=''>
-              <div className='bg-hex flex justify-center md:h-[280px] md:w-[270px] p-12'>
-                <Image src={item.pic} alt={item.title} width={200} height={200} />
-              </div>
-              <h3 className='text-navy font-josefin text-center'>{item.title}</h3>
+        {/* Rating Item */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold mb-2">Rating Item</h2>
+          {[5, 4, 3].map((stars, index) => (
+            <label key={index} className="flex items-center mb-2">
+              <input type="checkbox" className="mr-2" />
+              <span className="flex items-center">
+                &#9733;&#9733;&#9733;&#9733;&#9734;
+              </span>
+            </label>
+          ))}
+        </div>
 
-              <div className='my-3 flex justify-center'>
-                <div className="flex h-3 w-[80px] gap-2">
-                  <div className="h-3 w-3 rounded-full bg-yellow"></div>
-                  <div className="h-3 w-3 rounded-full bg-pink"></div>
-                  <div className="h-3 w-3 rounded-full bg-blue"></div>
+        {/* Categories */}
+        <div>
+          <h2 className="text-lg font-bold mb-2">Categories</h2>
+          {["Prestashop", "Magento", "Bigcommerce", "osCommerce", "3dcart"].map((category) => (
+            <label key={category} className="block mb-2">
+              <input type="checkbox" className="mr-2" />
+              {category}
+            </label>
+          ))}
+        </div>
+      </aside>
+
+      {/* Product Grid */}
+      <main className="w-full lg:w-3/4 p-4">
+        <h1 className="text-2xl font-bold mb-4">Product Grid with Features</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="border p-4 bg-white rounded-lg shadow-md flex flex-col"
+            >
+              {/* Product Image */}
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={284}
+                height={197}
+                className="w-full h-40 object-cover rounded-md"
+              />
+
+              {/* Product Details */}
+              <div className="mt-4 flex-1">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold">{product.name}</h3>
+                  {/* Colorful Dots */}
+                  <div className="flex space-x-2">
+                    <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+                  </div>
+                </div>
+
+                {/* Star Rating */}
+                <div className="flex items-center mt-1">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, index) => (
+                      <span
+                        key={index}
+                        className={`${
+                          index < product.rating
+                            ? "text-yellow-500"
+                            : "text-gray-300"
+                        } text-lg`}
+                      >
+                        ★
+                      </span>
+                    ))}
+                </div>
+
+                <p className="text-sm text-gray-600 mt-2">
+                  {product.description}
+                </p>
+
+                {/* Price and Old Price */}
+                <div className="mt-2">
+                  <span className="text-lg font-bold text-indigo-600">
+                    ${product.price}
+                  </span>
+                  <span className="ml-2 line-through text-gray-500">
+                    ${product.oldPrice}
+                  </span>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-2 flex space-x-2">
+                  <button className="text-gray-500 hover:text-indigo-600">
+                    ❤
+                  </button>
+                  <button className="text-gray-500 hover:text-indigo-600">
+                    🔍
+                  </button>
+                  <button className="text-gray-500 hover:text-indigo-600">
+                    🛒
+                  </button>
                 </div>
               </div>
-
-              <div className='flex justify-center gap-5'>
-                <h4>{item.offerPrice}</h4>
-                <h4 className='text-pink line-through'>{item.regularPrice}</h4>
-              </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className='container px-[1.3rem] my-24 flex justify-center'>
-        <Image src="/images/logo1.png" alt="Logo" width={200} height={100} />
-      </div>
-    </>
+          ))}
+        </div>
+      </main>
+    </div>
   );
 }
-
-export default ShopGrid;
