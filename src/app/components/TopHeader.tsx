@@ -77,7 +77,7 @@ const TopHeader = () => {
           </a>
 
           {/* Wishlist */}
-          <a href="/wishlist" className="flex items-center gap-2 cursor-pointer hover:text-gray-200">
+          <a href="/" className="flex items-center gap-2 cursor-pointer hover:text-gray-200">
             <Heart />
             <span>Wishlist</span>
           </a>
