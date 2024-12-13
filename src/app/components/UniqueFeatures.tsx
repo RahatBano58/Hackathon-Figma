@@ -1,41 +1,54 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-const UniqueFeature = () => {
+const UniqueFeatures = () => {
   return (
-    <div className="w-full h-auto flex justify-center mt-4 mb-2">
-      <div className="bg-purple-100 h-full w-full md:w-[90%] lg:w-[80%] flex flex-col md:flex-row justify-between items-center md:items-start py-8 px-4 md:py-0 md:px-0">
-        {/* Left Section */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative mt-6 md:mt-0">
-          <div className="rounded-full bg-pink-200 w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 absolute"></div>
+    <section className="bg-purple-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-8">
+        {/* Sofa Image */}
+        <div className="flex-1 order-1 lg:order-1">
           <Image
-            src="/uniquefeature/sofa2.png"
-            width={250}
-            height={200}
-            alt="sofa"
-            className="relative z-10 ml-0 md:ml-10 lg:ml-20"
+            src="/uniquefeature/sofa2.png" // Replace with the actual path of your sofa image
+            alt="Sofa"
+            width={500}
+            height={500}
+            className="mx-auto lg:mx-0 object-contain"
           />
         </div>
 
-        {/* Right Section: Text and Button */}
-        <div className="text-blue-950 w-full md:w-1/2 flex flex-col justify-center items-start mt-8 md:mt-14 mb-8 md:mb-20">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 md:ml-10">
-            Unique Features Of Latest & <br /> Trending Products
-          </h1>
-          <ul className="text-sm sm:text-base mb-6 md:ml-10 space-y-2">
-            <li>All frames constructed with hardwood solids and laminates</li>
-            <li>
-              Reinforced with double wood dowels, glue, screw nails, corner blocks, and machine nails
+        {/* Text Content */}
+        <div className="flex-1 text-center lg:text-left order-2 space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">
+            Unique Features Of Latest & Trending Products
+          </h2>
+          <ul className="space-y-2 text-gray-600">
+            <li className="flex items-center justify-center lg:justify-start">
+              <span className="w-3 h-3 bg-pink-500 rounded-full mr-3"></span>
+              All frames constructed with hardwood solids and laminates
             </li>
-            <li>Arms, backs, and seats are structurally reinforced</li>
+            <li className="flex items-center justify-center lg:justify-start">
+              <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+              Reinforced with double wood dowels, glue, screw-nails, corner
+              blocks, and machine nails
+            </li>
+            <li className="flex items-center justify-center lg:justify-start">
+              <span className="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+              Arms, backs, and seats are structurally reinforced
+            </li>
           </ul>
-          <button className="bg-[#FB2E86] font-bold text-sm sm:text-base px-4 sm:px-6 py-2 rounded ml-0 md:ml-10">
-            Add To Cart
-          </button>
+          <div className="mt-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+            <button className="bg-pink-500 text-white py-3 px-6 rounded-md shadow-md text-sm hover:bg-pink-600 transition">
+              Add To Cart
+            </button>
+            <span className="text-blue-900 font-semibold">
+              B&B Italian Sofa <br />
+              <span className="text-blue-900">$32.00</span>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default UniqueFeature;
+export default UniqueFeatures;
