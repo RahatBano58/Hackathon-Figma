@@ -56,6 +56,12 @@ const FeaturedProducts = () => {
                 <h3 className="text-lg font-semibold text-gray-800">
                   {product.name}
                 </h3>
+                 {/* Color Line */}
+                  <div className="flex justify-center gap-1 my-2">
+                    <div className="w-4 h-1 bg-green-500 rounded"></div>
+                    <div className="w-4 h-1 bg-pink-500 rounded"></div>
+                    <div className="w-4 h-1 bg-blue-500 rounded"></div>
+                  </div>
                 <p className="text-sm text-gray-500">{product.code}</p>
                 <p className="text-lg font-bold text-gray-800 mt-2">
                   {product.price}
